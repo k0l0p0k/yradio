@@ -6,13 +6,13 @@
 # set directory to launch script from
 export LAUNCHDIR="$(dirname "$(readlink -f "$0")")"
 
-if [ -z `which yad` ]; then
+if [ -z `busybox which yad` ]; then
 	msg="  Package 'yad' is not installed, please install it. "
 	xmessage  "`echo -e $msg`" 
 exit 0
 fi
 
-if [ -z `which mplayer` ]; then
+if [ -z `busybox which mplayer` ]; then
 	msg="  Package 'mplayer' is not installed, please install it. "
 	xmessage  "`echo -e $msg`" 
 exit 0
